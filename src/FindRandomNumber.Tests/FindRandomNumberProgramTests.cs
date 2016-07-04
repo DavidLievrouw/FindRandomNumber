@@ -38,6 +38,29 @@ namespace FindRandomNumber {
         _sut.Run();
         A.CallTo(() => _generator.Generate()).MustHaveHappened();
       }
+
+      [Test]
+      public void CreatesGuesser_ThatGuessesTheGeneratedRandomNumber() {
+        var numberToGuess = new RandomNumber(123);
+        A.CallTo(() => _generator.Generate()).Returns(numberToGuess);
+
+        _sut.Run();
+
+        A.CallTo(() => _guesserFactory.Create(numberToGuess.Value)).MustHaveHappened();
+      }
+
+      [Test]
+      public void CallsGuesser_ThatGuessesTheGeneratedRandomNumber() {
+        var numberToGuess = new RandomNumber(123);
+        A.CallTo(() => _generator.Generate()).Returns(numberToGuess);
+
+        var fakeGuesser = A.Fake<IGuesser>();
+        A.CallTo(() => _guesserFactory.Create(numberToGuess.Value)).Returns(fakeGuesser);
+
+        _sut.Run();
+
+        A.CallTo(() => fakeGuesser.GuessRandomNumber()).MustHaveHappened();
+      }
     }
   }
 }

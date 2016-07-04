@@ -16,6 +16,8 @@ namespace FindRandomNumber {
 
     public void Run() {
       var randomNumberToGuess = _generator.Generate();
+      var guesser = _guesserFactory.Create(randomNumberToGuess.Value);
+      var guessingSequence = guesser.GuessRandomNumber();
 
     }
   }
