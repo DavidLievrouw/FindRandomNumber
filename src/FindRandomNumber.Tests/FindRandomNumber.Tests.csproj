@@ -51,6 +51,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FindRandomNumber.Generator\FindRandomNumber.Generator.csproj">
+      <Project>{6c7d4875-30ea-47b4-9718-5d19eafc0136}</Project>
+      <Name>FindRandomNumber.Generator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FindRandomNumber.Guesser\FindRandomNumber.Guesser.csproj">
+      <Project>{6e0afeb0-9470-458b-aefd-71c026b88954}</Project>
+      <Name>FindRandomNumber.Guesser</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FindRandomNumber\FindRandomNumber.csproj">
       <Project>{02fa0632-bf94-412a-b375-a28e24d8e8b1}</Project>
       <Name>FindRandomNumber</Name>
