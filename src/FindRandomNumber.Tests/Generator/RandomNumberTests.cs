@@ -1,24 +1,15 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace FindRandomNumber.Generator {
   [TestFixture]
   public class RandomNumberTests {
     [TestFixture]
-    public class Creation : RandomNumberTests {
+    public class Construction : RandomNumberTests {
       short _shortValue;
 
       [SetUp]
       public void SetUp() {
         _shortValue = 8842;
-      }
-
-      [TestCase(-1)]
-      [TestCase(10001)]
-      [TestCase(short.MinValue)]
-      [TestCase(short.MaxValue)]
-      public void GivenValueOutOfRange_Throws(short outOfRangeValue) {
-        Assert.Throws<ArgumentOutOfRangeException>(() => new RandomNumber(outOfRangeValue));
       }
 
       [Test]

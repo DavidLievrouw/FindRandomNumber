@@ -1,17 +1,17 @@
 ﻿using System;
 
-namespace FindRandomNumber.Generator {
-  public class Generator : IGenerator {
+namespace FindRandomNumber.Guesser {
+  public class Guesser : IGuesser {
     readonly short _minValue;
     readonly short _maxValue;
 
-    public Generator(short minValue, short maxValue) {
+    public Guesser(short minValue, short maxValue) {
       if (maxValue < minValue) throw new ArgumentOutOfRangeException(nameof(maxValue), "The maximum value is less than the minimum value.");
       _minValue = minValue;
       _maxValue = maxValue;
     }
 
-    public RandomNumber Generate() {
+    public GuessingSequence GuessRandomNumber() {
       throw new System.NotImplementedException();
     }
   }

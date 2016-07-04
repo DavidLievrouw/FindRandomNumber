@@ -2,13 +2,7 @@
 
 namespace FindRandomNumber.Generator {
   public struct RandomNumber : IEquatable<RandomNumber> {
-    // ToDo: Get from config?
-    const short MinValue = 0;
-    const short MaxValue = 10000;
-
     public RandomNumber(short value) {
-      if (value < MinValue) throw new ArgumentOutOfRangeException(nameof(value));
-      if (value > MaxValue) throw new ArgumentOutOfRangeException(nameof(value));
       Value = value;
     }
 

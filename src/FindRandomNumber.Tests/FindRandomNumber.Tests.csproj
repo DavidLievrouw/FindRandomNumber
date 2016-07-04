@@ -69,7 +69,9 @@
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="FindRandomNumberProgramTests.cs" />
+    <Compile Include="Generator\GeneratorTests.cs" />
     <Compile Include="Generator\RandomNumberTests.cs" />
+    <Compile Include="Guesser\GuesserTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
