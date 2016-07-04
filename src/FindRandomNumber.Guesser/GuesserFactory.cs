@@ -1,4 +1,5 @@
 ﻿using System;
+using FindRandomNumber.Guesser.AttemptCalculation;
 
 namespace FindRandomNumber.Guesser {
   public class GuesserFactory : IGuesserFactory {

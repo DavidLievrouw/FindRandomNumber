@@ -1,5 +1,6 @@
 ﻿using System;
 using FakeItEasy;
+using FindRandomNumber.Guesser.AttemptCalculation;
 using NUnit.Framework;
 
 namespace FindRandomNumber.Guesser {

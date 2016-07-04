@@ -1,3 +1,5 @@
+using FindRandomNumber.Guesser.AttemptCalculation;
+
 namespace FindRandomNumber.Guesser {
   public struct Guess {
     public Guess(Attempt attempt, RelationToTargetValue relationToTargetValue) {

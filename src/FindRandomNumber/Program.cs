@@ -2,6 +2,7 @@
 using System.Configuration;
 using FindRandomNumber.Common;
 using FindRandomNumber.Guesser;
+using FindRandomNumber.Guesser.AttemptCalculation;
 using FindRandomNumber.Output;
 
 namespace FindRandomNumber {

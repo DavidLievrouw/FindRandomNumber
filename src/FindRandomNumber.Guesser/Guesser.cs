@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using FindRandomNumber.Guesser.AttemptCalculation;
 
 namespace FindRandomNumber.Guesser {
   public class Guesser : IGuesser {

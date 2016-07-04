@@ -3,7 +3,7 @@ using FakeItEasy;
 using FindRandomNumber.Common;
 using NUnit.Framework;
 
-namespace FindRandomNumber.Guesser {
+namespace FindRandomNumber.Guesser.AttemptCalculation {
   [TestFixture]
   public class PreviousGuessTooHighAttemptCalculatorTests {
     IMidPointCalculator _midPointCalculator;

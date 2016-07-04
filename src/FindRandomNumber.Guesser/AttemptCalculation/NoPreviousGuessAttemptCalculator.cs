@@ -1,7 +1,7 @@
 using System;
 using FindRandomNumber.Common;
 
-namespace FindRandomNumber.Guesser {
+namespace FindRandomNumber.Guesser.AttemptCalculation {
   public class NoPreviousGuessAttemptCalculator : IAttemptCalculator {
     readonly IMidPointCalculator _midPointCalculator;
     readonly Range _fullRange;

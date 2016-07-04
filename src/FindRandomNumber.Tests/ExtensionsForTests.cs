@@ -1,5 +1,6 @@
 using FindRandomNumber.Common;
 using FindRandomNumber.Guesser;
+using FindRandomNumber.Guesser.AttemptCalculation;
 
 namespace FindRandomNumber {
   public static class ExtensionsForTests {

@@ -1,4 +1,6 @@
-﻿namespace FindRandomNumber.Guesser {
+﻿using FindRandomNumber.Guesser.AttemptCalculation;
+
+namespace FindRandomNumber.Guesser {
   public class GuessAttempter : IGuessAttempter {
     readonly short _valueToGuess;
 

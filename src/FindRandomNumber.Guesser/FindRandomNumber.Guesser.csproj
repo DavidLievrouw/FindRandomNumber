@@ -43,22 +43,22 @@
     <Compile Include="..\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Attempt.cs" />
-    <Compile Include="CompositeAttemptCalculator.cs" />
+    <Compile Include="AttemptCalculation\Attempt.cs" />
+    <Compile Include="AttemptCalculation\CompositeAttemptCalculator.cs" />
     <Compile Include="Guess.cs" />
     <Compile Include="GuessAttempter.cs" />
     <Compile Include="Guesser.cs" />
     <Compile Include="GuesserFactory.cs" />
     <Compile Include="GuessingSequence.cs" />
-    <Compile Include="IAttemptCalculator.cs" />
+    <Compile Include="AttemptCalculation\IAttemptCalculator.cs" />
     <Compile Include="IGuessAttempter.cs" />
     <Compile Include="IGuesser.cs" />
     <Compile Include="IGuesserFactory.cs" />
-    <Compile Include="IMidPointCalculator.cs" />
-    <Compile Include="MidPointCalculator.cs" />
-    <Compile Include="NoPreviousGuessAttemptCalculator.cs" />
-    <Compile Include="PreviousGuessTooHighAttemptCalculator.cs" />
-    <Compile Include="PreviousGuessTooLowAttemptCalculator.cs" />
+    <Compile Include="AttemptCalculation\IMidPointCalculator.cs" />
+    <Compile Include="AttemptCalculation\MidPointCalculator.cs" />
+    <Compile Include="AttemptCalculation\NoPreviousGuessAttemptCalculator.cs" />
+    <Compile Include="AttemptCalculation\PreviousGuessTooHighAttemptCalculator.cs" />
+    <Compile Include="AttemptCalculation\PreviousGuessTooLowAttemptCalculator.cs" />
     <Compile Include="RelationToTargetValue.cs" />
   </ItemGroup>
   <ItemGroup>

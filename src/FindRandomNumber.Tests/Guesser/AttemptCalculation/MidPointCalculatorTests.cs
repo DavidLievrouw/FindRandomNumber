@@ -1,7 +1,7 @@
 ﻿using FindRandomNumber.Common;
 using NUnit.Framework;
 
-namespace FindRandomNumber.Guesser {
+namespace FindRandomNumber.Guesser.AttemptCalculation {
   [TestFixture]
   public class MidPointCalculatorTests {
     MidPointCalculator _sut;
