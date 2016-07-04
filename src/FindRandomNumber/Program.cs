@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using FindRandomNumber.Guesser;
 using FindRandomNumber.Output;
 
 namespace FindRandomNumber {
@@ -11,7 +12,7 @@ namespace FindRandomNumber {
       var maxValue = short.Parse(ConfigurationManager.AppSettings["MaxValue"]);
       _findRandomNumberProgram = new FindRandomNumberProgram(
         new Generator.Generator(minValue, maxValue),
-        new Guesser.GuesserFactory(minValue, maxValue),
+        new GuesserFactory(new AttemptCalculator(minValue, maxValue)),
         new ConsoleGuessingSequenceOutputWriter(new RealConsole()));
 
       _findRandomNumberProgram.Run();

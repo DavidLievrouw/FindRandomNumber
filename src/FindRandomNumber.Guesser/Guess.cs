@@ -1,12 +1,13 @@
 namespace FindRandomNumber.Guesser {
-  public class Guess {
-    public Guess(short guessedValue, bool isCorrectGuess) {
+  public struct Guess {
+    public Guess(short guessedValue, Relation relationToCorrectAnswer) {
       GuessedValue = guessedValue;
-      IsCorrectGuess = isCorrectGuess;
+      RelationToCorrectAnswer = relationToCorrectAnswer;
     }
 
     public short GuessedValue { get; }
-    public bool IsCorrectGuess { get; }
+    public Relation RelationToCorrectAnswer { get; }
+    public bool IsCorrectGuess => RelationToCorrectAnswer == Relation.Correct;
 
     public override string ToString() {
       return $"Proposing number “{GuessedValue}”... {(IsCorrectGuess ? "correct" : "incorrect")}.";

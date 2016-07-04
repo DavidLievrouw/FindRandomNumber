@@ -1,25 +1,24 @@
 ﻿using System;
+using FakeItEasy;
 using NUnit.Framework;
 
 namespace FindRandomNumber.Guesser {
   [TestFixture]
   public class GuesserFactoryTests {
-    short _minValue;
-    short _maxValue;
+    IAttemptCalculator _attemptCalculator;
     GuesserFactory _sut;
 
     [SetUp]
     public virtual void SetUp() {
-      _minValue = 100;
-      _maxValue = 10000;
-      _sut = new GuesserFactory(_minValue, _maxValue);
+      _attemptCalculator = A.Fake<IAttemptCalculator>();
+      _sut = new GuesserFactory(_attemptCalculator);
     }
 
     [TestFixture]
     public class Construction : GuesserFactoryTests {
       [Test]
-      public void GivenMaxValueSmallerThanMinValue_Throws() {
-        Assert.Throws<ArgumentOutOfRangeException>(() => new GuesserFactory(_minValue, (short)(_minValue - 1)));
+      public void GivenNullAttemptCalculator_Throws() {
+        Assert.Throws<ArgumentNullException>(() => new GuesserFactory(null));
       }
     }
 
@@ -30,7 +29,7 @@ namespace FindRandomNumber.Guesser {
       [SetUp]
       public override void SetUp() {
         base.SetUp();
-        _valueToGuess = (short)(_minValue + 12);
+        _valueToGuess = 12;
       }
 
       [Test]

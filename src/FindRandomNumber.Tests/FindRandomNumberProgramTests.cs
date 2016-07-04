@@ -79,7 +79,7 @@ namespace FindRandomNumber {
         var fakeGuesser = A.Fake<IGuesser>();
         A.CallTo(() => _guesserFactory.Create(numberToGuess.Value)).Returns(fakeGuesser);
 
-        var performedGuessingSequence = new GuessingSequence(new [] { new Guess(1, true) });
+        var performedGuessingSequence = new GuessingSequence(new [] { new Guess(1, Relation.Correct) });
         A.CallTo(() => fakeGuesser.GuessRandomNumber()).Returns(performedGuessingSequence);
 
         _sut.Run();

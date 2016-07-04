@@ -1,22 +1,30 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace FindRandomNumber.Guesser {
   public class Guesser : IGuesser {
-    readonly short _minValue;
-    readonly short _maxValue;
-    readonly short _valueToGuess;
+    readonly IAttemptCalculator _attemptCalculator;
+    readonly IGuessAttempter _guessAttempter;
 
-    public Guesser(short minValue, short maxValue, short valueToGuess) {
-      if (maxValue < minValue) throw new ArgumentOutOfRangeException(nameof(maxValue), "The maximum value is less than the minimum value.");
-      if (valueToGuess < minValue) throw new ArgumentOutOfRangeException(nameof(valueToGuess));
-      if (valueToGuess > maxValue) throw new ArgumentOutOfRangeException(nameof(valueToGuess));
-      _minValue = minValue;
-      _maxValue = maxValue;
-      _valueToGuess = valueToGuess;
+    public Guesser(IAttemptCalculator attemptCalculator, IGuessAttempter guessAttempter) {
+      if (attemptCalculator == null) throw new ArgumentNullException(nameof(attemptCalculator));
+      if (guessAttempter == null) throw new ArgumentNullException(nameof(guessAttempter));
+      _attemptCalculator = attemptCalculator;
+      _guessAttempter = guessAttempter;
     }
 
     public GuessingSequence GuessRandomNumber() {
-      throw new System.NotImplementedException();
+      // ToDo: No more than 15 guesses
+      var attemptedGuesses = new List<Guess>();
+
+      Guess? currentGuess = null;
+      while (!currentGuess.HasValue || !currentGuess.Value.IsCorrectGuess) {
+        var nextAttempt = _attemptCalculator.CalculateNextAttempt(currentGuess);
+        currentGuess = _guessAttempter.AttemptGuess(nextAttempt);
+        attemptedGuesses.Add(currentGuess.Value);
+      }
+
+      return new GuessingSequence(attemptedGuesses);
     }
   }
 }
