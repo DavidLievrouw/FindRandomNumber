@@ -7,7 +7,13 @@
     }
 
     public Guess AttemptGuess(short attemptValue) {
-      throw new System.NotImplementedException();
+      var relation = attemptValue == _valueToGuess
+        ? Relation.Correct
+        : attemptValue < _valueToGuess
+          ? Relation.Smaller
+          : Relation.Larger;
+
+      return new Guess(attemptValue, relation);
     }
   }
 }
