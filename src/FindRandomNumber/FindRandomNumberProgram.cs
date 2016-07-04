@@ -5,13 +5,13 @@ using FindRandomNumber.Guesser;
 namespace FindRandomNumber {
   public class FindRandomNumberProgram : IFindRandomNumberProgram {
     readonly IGenerator _generator;
-    readonly IGuesser _guesser;
+    readonly IGuesserFactory _guesserFactory;
 
-    public FindRandomNumberProgram(IGenerator generator, IGuesser guesser) {
+    public FindRandomNumberProgram(IGenerator generator, IGuesserFactory guesserFactory) {
       if (generator == null) throw new ArgumentNullException(nameof(generator));
-      if (guesser == null) throw new ArgumentNullException(nameof(guesser));
+      if (guesserFactory == null) throw new ArgumentNullException(nameof(guesserFactory));
       _generator = generator;
-      _guesser = guesser;
+      _guesserFactory = guesserFactory;
     }
 
     public void Run() {

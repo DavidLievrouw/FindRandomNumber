@@ -71,6 +71,7 @@
     <Compile Include="FindRandomNumberProgramTests.cs" />
     <Compile Include="Generator\GeneratorTests.cs" />
     <Compile Include="Generator\RandomNumberTests.cs" />
+    <Compile Include="Guesser\GuesserFactoryTests.cs" />
     <Compile Include="Guesser\GuesserTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

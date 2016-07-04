@@ -8,25 +8,25 @@ namespace FindRandomNumber {
   [TestFixture]
   public class FindRandomNumberProgramTests {
     IGenerator _generator;
-    IGuesser _guesser;
+    IGuesserFactory _guesserFactory;
     FindRandomNumberProgram _sut;
 
     [SetUp]
     public virtual void SetUp() {
       _generator = A.Fake<IGenerator>();
-      _guesser = A.Fake<IGuesser>();
-      _sut = new FindRandomNumberProgram(_generator, _guesser);
+      _guesserFactory = A.Fake<IGuesserFactory>();
+      _sut = new FindRandomNumberProgram(_generator, _guesserFactory);
     }
 
     [TestFixture]
     public class Construction : FindRandomNumberProgramTests {
       [Test]
       public void GivenNullGenerator_Throws() {
-        Assert.Throws<ArgumentNullException>(() => new FindRandomNumberProgram(null, _guesser));
+        Assert.Throws<ArgumentNullException>(() => new FindRandomNumberProgram(null, _guesserFactory));
       }
 
       [Test]
-      public void GivenNullGuesser_Throws() {
+      public void GivenNullGuesserFactory_Throws() {
         Assert.Throws<ArgumentNullException>(() => new FindRandomNumberProgram(_generator, null));
       }
     }

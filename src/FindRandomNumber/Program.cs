@@ -10,7 +10,7 @@ namespace FindRandomNumber {
       var maxValue = short.Parse(ConfigurationManager.AppSettings["MaxValue"]);
       _findRandomNumberProgram = new FindRandomNumberProgram(
         new Generator.Generator(minValue, maxValue),
-        new Guesser.Guesser(minValue, maxValue));
+        new Guesser.GuesserFactory(minValue, maxValue));
 
       _findRandomNumberProgram.Run();
 

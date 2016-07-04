@@ -45,8 +45,10 @@
     </Compile>
     <Compile Include="Guess.cs" />
     <Compile Include="Guesser.cs" />
+    <Compile Include="GuesserFactory.cs" />
     <Compile Include="GuessingSequence.cs" />
     <Compile Include="IGuesser.cs" />
+    <Compile Include="IGuesserFactory.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
