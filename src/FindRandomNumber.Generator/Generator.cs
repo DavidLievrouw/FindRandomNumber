@@ -3,18 +3,15 @@ using FindRandomNumber.Common;
 
 namespace FindRandomNumber.Generator {
   public class Generator : IGenerator {
-    readonly short _minValue;
-    readonly short _maxValue;
+    readonly Range _range;
 
-    public Generator(short minValue, short maxValue) {
-      if (maxValue < minValue) throw new ArgumentOutOfRangeException(nameof(maxValue), "The maximum value is less than the minimum value.");
-      if (maxValue >= short.MaxValue) throw new ArgumentOutOfRangeException(nameof(maxValue), $"The maximum value is {short.MaxValue - 1}.");
-      _minValue = minValue;
-      _maxValue = maxValue;
+    public Generator(Range range) {
+      if (range.Maximum >= short.MaxValue) throw new ArgumentOutOfRangeException(nameof(range), $"The maximum allowed value is {short.MaxValue - 1}.");
+      _range = range;
     }
 
     public RandomNumber Generate() {
-      return (RandomNumber)(short)new Random().Next(_minValue, _maxValue + 1);
+      return (RandomNumber)(short)new Random().Next(_range.Minimum, _range.Maximum + 1);
     }
   }
 }
