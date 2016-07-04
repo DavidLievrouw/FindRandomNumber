@@ -2,6 +2,7 @@
 
 namespace FindRandomNumber.Generator {
   public struct RandomNumber : IEquatable<RandomNumber> {
+    // ToDo: Get from config?
     const short MinValue = 0;
     const short MaxValue = 10000;
 
