@@ -1,5 +1,6 @@
 ﻿using System;
 using FakeItEasy;
+using FindRandomNumber.Common;
 using FindRandomNumber.Generator;
 using FindRandomNumber.Guesser;
 using FindRandomNumber.Output;

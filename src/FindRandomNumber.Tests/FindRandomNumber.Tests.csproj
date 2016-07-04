@@ -51,6 +51,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FindRandomNumber.Common\FindRandomNumber.Common.csproj">
+      <Project>{8cfb6052-16d2-4ce0-bb46-fe3cce2795cf}</Project>
+      <Name>FindRandomNumber.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FindRandomNumber.Generator\FindRandomNumber.Generator.csproj">
       <Project>{6c7d4875-30ea-47b4-9718-5d19eafc0136}</Project>
       <Name>FindRandomNumber.Generator</Name>
@@ -70,7 +74,7 @@
     </Compile>
     <Compile Include="FindRandomNumberProgramTests.cs" />
     <Compile Include="Generator\GeneratorTests.cs" />
-    <Compile Include="Generator\RandomNumberTests.cs" />
+    <Compile Include="Common\RandomNumberTests.cs" />
     <Compile Include="Guesser\GuessAttempterTests.cs" />
     <Compile Include="Guesser\GuessEqualityComparer.cs" />
     <Compile Include="Guesser\GuesserFactoryTests.cs" />
@@ -78,7 +82,7 @@
     <Compile Include="Guesser\GuessingSequenceSummaryTests.cs" />
     <Compile Include="Guesser\GuessingSequenceTests.cs" />
     <Compile Include="Guesser\GuessTests.cs" />
-    <Compile Include="Guesser\RangeTests.cs" />
+    <Compile Include="Common\RangeTests.cs" />
     <Compile Include="Output\ConsoleGuessingSequenceOutputWriterTests.cs" />
     <Compile Include="ExtensionsForTests.cs" />
   </ItemGroup>

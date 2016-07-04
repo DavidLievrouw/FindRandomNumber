@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FindRandomNumber.Guesser {
+namespace FindRandomNumber.Common {
   public struct Range {
     public Range(short minimum, short maximum) {
       if (minimum > maximum) throw new ArgumentOutOfRangeException(nameof(maximum), "Maximum is less than minimum.");

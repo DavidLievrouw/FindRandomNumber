@@ -47,7 +47,6 @@
     <Compile Include="..\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="ExtensionsForEnumerableOfT.ForEach.cs" />
     <Compile Include="FindRandomNumberProgram.cs" />
     <Compile Include="IFindRandomNumberProgram.cs" />
     <Compile Include="Output\ConsoleGuessingSequenceOutputWriter.cs" />
@@ -57,6 +56,10 @@
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FindRandomNumber.Common\FindRandomNumber.Common.csproj">
+      <Project>{8cfb6052-16d2-4ce0-bb46-fe3cce2795cf}</Project>
+      <Name>FindRandomNumber.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FindRandomNumber.Generator\FindRandomNumber.Generator.csproj">
       <Project>{6c7d4875-30ea-47b4-9718-5d19eafc0136}</Project>
       <Name>FindRandomNumber.Generator</Name>

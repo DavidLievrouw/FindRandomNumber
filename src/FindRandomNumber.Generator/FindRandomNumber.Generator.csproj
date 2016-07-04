@@ -45,7 +45,12 @@
     </Compile>
     <Compile Include="Generator.cs" />
     <Compile Include="IGenerator.cs" />
-    <Compile Include="RandomNumber.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FindRandomNumber.Common\FindRandomNumber.Common.csproj">
+      <Project>{8cfb6052-16d2-4ce0-bb46-fe3cce2795cf}</Project>
+      <Name>FindRandomNumber.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

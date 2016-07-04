@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FindRandomNumber {
-  public static partial class ExtensionsForEnumerableOfT {
+namespace FindRandomNumber.Common {
+  public static class ExtensionsForEnumerableOfT {
     public static void ForEach<T>(this IEnumerable<T> source, Action<T> action) {
       foreach (var element in source) {
         action(element);

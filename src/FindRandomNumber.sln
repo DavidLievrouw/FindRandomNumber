@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindRandomNumber.Generator"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindRandomNumber.Guesser", "FindRandomNumber.Guesser\FindRandomNumber.Guesser.csproj", "{6E0AFEB0-9470-458B-AEFD-71C026B88954}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindRandomNumber.Common", "FindRandomNumber.Common\FindRandomNumber.Common.csproj", "{8CFB6052-16D2-4CE0-BB46-FE3CCE2795CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6E0AFEB0-9470-458B-AEFD-71C026B88954}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E0AFEB0-9470-458B-AEFD-71C026B88954}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E0AFEB0-9470-458B-AEFD-71C026B88954}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CFB6052-16D2-4CE0-BB46-FE3CCE2795CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CFB6052-16D2-4CE0-BB46-FE3CCE2795CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CFB6052-16D2-4CE0-BB46-FE3CCE2795CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CFB6052-16D2-4CE0-BB46-FE3CCE2795CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

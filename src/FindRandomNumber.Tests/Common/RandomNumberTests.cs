@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace FindRandomNumber.Generator {
+namespace FindRandomNumber.Common {
   [TestFixture]
   public class RandomNumberTests {
     [TestFixture]

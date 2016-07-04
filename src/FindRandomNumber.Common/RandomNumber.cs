@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FindRandomNumber.Generator {
+namespace FindRandomNumber.Common {
   public struct RandomNumber : IEquatable<RandomNumber> {
     public RandomNumber(short value) {
       Value = value;

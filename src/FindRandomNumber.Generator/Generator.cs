@@ -1,4 +1,5 @@
 ﻿using System;
+using FindRandomNumber.Common;
 
 namespace FindRandomNumber.Generator {
   public class Generator : IGenerator {

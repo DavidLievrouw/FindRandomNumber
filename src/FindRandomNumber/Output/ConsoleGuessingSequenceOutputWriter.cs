@@ -1,4 +1,5 @@
 ﻿using System;
+using FindRandomNumber.Common;
 using FindRandomNumber.Guesser;
 
 namespace FindRandomNumber.Output {
