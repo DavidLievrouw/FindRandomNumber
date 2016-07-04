@@ -23,7 +23,6 @@ namespace FindRandomNumber {
         new Generator.Generator(range),
         new GuesserFactory(new AttemptCalculator(range)),
         new ConsoleGuessingSequenceOutputWriter(new RealConsole()));
-
     }
   }
 }
