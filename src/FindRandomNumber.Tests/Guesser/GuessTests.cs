@@ -7,7 +7,7 @@ namespace FindRandomNumber.Guesser {
     public class ToStringOverride : GuessTests {
       [Test]
       public void ReturnsExpectedString_ForIncorrectGuess() {
-        var sut = new Guess(123.AsAttempt(), Relation.Smaller);
+        var sut = new Guess(123.AsAttempt(), Relation.LowerThanTarget);
         var expected = "Proposing number “123”... incorrect.";
         var actual = sut.ToString();
         Assert.That(actual, Is.EqualTo(expected));
@@ -25,8 +25,8 @@ namespace FindRandomNumber.Guesser {
     [TestFixture]
     public class IsCorrectGuess : GuessTests {
       [TestCase(Relation.Correct, true)]
-      [TestCase(Relation.Larger, false)]
-      [TestCase(Relation.Smaller, false)]
+      [TestCase(Relation.GreaterThanTarget, false)]
+      [TestCase(Relation.LowerThanTarget, false)]
       public void DeterminesResultBasedOnRelation(Relation relation, bool expected) {
         var sut = new Guess(1234.AsAttempt(), relation);
         var actual = sut.IsCorrectGuess;

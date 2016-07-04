@@ -31,7 +31,7 @@ namespace FindRandomNumber.Output {
       [SetUp]
       public override void SetUp() {
         base.SetUp();
-        _guesses = new[] { new Guess(1.AsAttempt(), Relation.Smaller), new Guess(2.AsAttempt(), Relation.Smaller), new Guess(8.AsAttempt(), Relation.Larger), new Guess(6.AsAttempt(), Relation.Correct) };
+        _guesses = new[] { new Guess(1.AsAttempt(), Relation.LowerThanTarget), new Guess(2.AsAttempt(), Relation.LowerThanTarget), new Guess(8.AsAttempt(), Relation.GreaterThanTarget), new Guess(6.AsAttempt(), Relation.Correct) };
         _sequence = new GuessingSequence(_guesses);
       }
 

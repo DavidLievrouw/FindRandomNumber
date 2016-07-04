@@ -10,8 +10,8 @@
       var relation = attempt.Value == _valueToGuess
         ? Relation.Correct
         : attempt.Value < _valueToGuess
-          ? Relation.Smaller
-          : Relation.Larger;
+          ? Relation.LowerThanTarget
+          : Relation.GreaterThanTarget;
 
       return new Guess(attempt, relation);
     }

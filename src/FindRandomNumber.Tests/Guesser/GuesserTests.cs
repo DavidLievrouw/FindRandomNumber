@@ -38,8 +38,8 @@ namespace FindRandomNumber.Guesser {
         A.CallTo(() => _guessAttempter.AttemptGuess(A<Attempt>._))
           .ReturnsNextFromSequence(
             new Guess(2.AsAttempt(), Relation.Correct),
-            new Guess(3.AsAttempt(), Relation.Larger),
-            new Guess(4.AsAttempt(), Relation.Larger));
+            new Guess(3.AsAttempt(), Relation.GreaterThanTarget),
+            new Guess(4.AsAttempt(), Relation.GreaterThanTarget));
 
         var expectedSequence = new GuessingSequence(new[] { new Guess(2.AsAttempt(), Relation.Correct) });
 
@@ -54,13 +54,13 @@ namespace FindRandomNumber.Guesser {
           .ReturnsNextFromSequence(1.AsAttempt(), 2.AsAttempt(), 8.AsAttempt(), 6.AsAttempt(), 10.AsAttempt());
         A.CallTo(() => _guessAttempter.AttemptGuess(A<Attempt>._))
           .ReturnsNextFromSequence(
-            new Guess(1.AsAttempt(), Relation.Smaller),
-            new Guess(2.AsAttempt(), Relation.Smaller),
-            new Guess(8.AsAttempt(), Relation.Larger),
+            new Guess(1.AsAttempt(), Relation.LowerThanTarget),
+            new Guess(2.AsAttempt(), Relation.LowerThanTarget),
+            new Guess(8.AsAttempt(), Relation.GreaterThanTarget),
             new Guess(6.AsAttempt(), Relation.Correct),
-            new Guess(10.AsAttempt(), Relation.Larger));
+            new Guess(10.AsAttempt(), Relation.GreaterThanTarget));
 
-        var expectedSequence = new GuessingSequence(new[] { new Guess(1.AsAttempt(), Relation.Smaller), new Guess(2.AsAttempt(), Relation.Smaller), new Guess(8.AsAttempt(), Relation.Larger), new Guess(6.AsAttempt(), Relation.Correct) });
+        var expectedSequence = new GuessingSequence(new[] { new Guess(1.AsAttempt(), Relation.LowerThanTarget), new Guess(2.AsAttempt(), Relation.LowerThanTarget), new Guess(8.AsAttempt(), Relation.GreaterThanTarget), new Guess(6.AsAttempt(), Relation.Correct) });
 
         var actual = _sut.GuessRandomNumber();
 
@@ -73,11 +73,11 @@ namespace FindRandomNumber.Guesser {
           .ReturnsNextFromSequence(1.AsAttempt(), 2.AsAttempt(), 8.AsAttempt(), 6.AsAttempt(), 10.AsAttempt());
         A.CallTo(() => _guessAttempter.AttemptGuess(A<Attempt>._))
           .ReturnsNextFromSequence(
-            new Guess(1.AsAttempt(), Relation.Smaller),
-            new Guess(2.AsAttempt(), Relation.Smaller),
-            new Guess(8.AsAttempt(), Relation.Larger),
+            new Guess(1.AsAttempt(), Relation.LowerThanTarget),
+            new Guess(2.AsAttempt(), Relation.LowerThanTarget),
+            new Guess(8.AsAttempt(), Relation.GreaterThanTarget),
             new Guess(6.AsAttempt(), Relation.Correct),
-            new Guess(10.AsAttempt(), Relation.Larger));
+            new Guess(10.AsAttempt(), Relation.GreaterThanTarget));
 
         _sut.GuessRandomNumber();
 
