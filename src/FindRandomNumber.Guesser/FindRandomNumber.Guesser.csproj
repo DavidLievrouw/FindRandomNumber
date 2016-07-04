@@ -46,12 +46,12 @@
     <Compile Include="AttemptCalculation\Attempt.cs" />
     <Compile Include="AttemptCalculation\CompositeAttemptCalculator.cs" />
     <Compile Include="Guess.cs" />
-    <Compile Include="Attempter.cs" />
+    <Compile Include="AttemptPerformer.cs" />
     <Compile Include="Guesser.cs" />
     <Compile Include="GuesserFactory.cs" />
     <Compile Include="GuessingSequence.cs" />
     <Compile Include="AttemptCalculation\IAttemptCalculator.cs" />
-    <Compile Include="IAttempter.cs" />
+    <Compile Include="IAttemptPerformer.cs" />
     <Compile Include="IGuesser.cs" />
     <Compile Include="IGuesserFactory.cs" />
     <Compile Include="AttemptCalculation\IMidPointCalculator.cs" />

@@ -11,7 +11,7 @@ namespace FindRandomNumber.Guesser {
     }
 
     public IGuesser Create(short valueToGuess) {
-      return new Guesser(_attemptCalculator, new Attempter(valueToGuess));
+      return new Guesser(_attemptCalculator, new AttemptPerformer(valueToGuess));
     }
   }
 }

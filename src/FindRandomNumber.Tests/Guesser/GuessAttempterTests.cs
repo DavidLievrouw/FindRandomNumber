@@ -4,12 +4,12 @@ namespace FindRandomNumber.Guesser {
   [TestFixture]
   public class GuessAttempterTests {
     short _valueToGuess;
-    Attempter _sut;
+    AttemptPerformer _sut;
 
     [SetUp]
     public void SetUp() {
       _valueToGuess = 123;
-      _sut = new Attempter(_valueToGuess);
+      _sut = new AttemptPerformer(_valueToGuess);
     }
 
     [TestFixture]
@@ -18,7 +18,7 @@ namespace FindRandomNumber.Guesser {
       public void GivenCorrectGuess_ReturnsGuessThatRepresentsCorrectAttempt() {
         var attempt = _valueToGuess.AsAttempt();
         var expected = new Guess(attempt, RelationToTargetValue.Correct);
-        var actual = _sut.AttemptGuess(attempt);
+        var actual = _sut.PerformAttempt(attempt);
         Assert.That(actual, Is.EqualTo(expected).Using(new GuessEqualityComparer()));
       }
 
@@ -26,7 +26,7 @@ namespace FindRandomNumber.Guesser {
       public void GivenSmallerNumberGuess_ReturnsGuessThatRepresentsFailedAttempt() {
         var attempt = ((short)(_valueToGuess - 1)).AsAttempt();
         var expected = new Guess(attempt, RelationToTargetValue.LessThanTargetValue);
-        var actual = _sut.AttemptGuess(attempt);
+        var actual = _sut.PerformAttempt(attempt);
         Assert.That(actual, Is.EqualTo(expected).Using(new GuessEqualityComparer()));
       }
 
@@ -34,7 +34,7 @@ namespace FindRandomNumber.Guesser {
       public void GivenLargerNumberGuess_ReturnsGuessThatRepresentsFailedAttempt() {
         var attempt = ((short)(_valueToGuess + 1)).AsAttempt();
         var expected = new Guess(attempt, RelationToTargetValue.GreaterThanTargetValue);
-        var actual = _sut.AttemptGuess(attempt);
+        var actual = _sut.PerformAttempt(attempt);
         Assert.That(actual, Is.EqualTo(expected).Using(new GuessEqualityComparer()));
       }
     }
