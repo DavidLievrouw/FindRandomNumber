@@ -49,6 +49,10 @@
     </Compile>
     <Compile Include="FindRandomNumberProgram.cs" />
     <Compile Include="IFindRandomNumberProgram.cs" />
+    <Compile Include="Output\ConsoleGuessingSequenceOutputWriter.cs" />
+    <Compile Include="Output\IConsole.cs" />
+    <Compile Include="Output\IGuessingSequenceOutputWriter.cs" />
+    <Compile Include="Output\RealConsole.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
