@@ -44,7 +44,7 @@
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Attempt.cs" />
-    <Compile Include="AttemptCalculator.cs" />
+    <Compile Include="CompositeAttemptCalculator.cs" />
     <Compile Include="Guess.cs" />
     <Compile Include="GuessAttempter.cs" />
     <Compile Include="Guesser.cs" />
@@ -54,6 +54,11 @@
     <Compile Include="IGuessAttempter.cs" />
     <Compile Include="IGuesser.cs" />
     <Compile Include="IGuesserFactory.cs" />
+    <Compile Include="IMidPointCalculator.cs" />
+    <Compile Include="MidPointCalculator.cs" />
+    <Compile Include="NoPreviousGuessAttemptCalculator.cs" />
+    <Compile Include="PreviousGuessTooHighAttemptCalculator.cs" />
+    <Compile Include="PreviousGuessTooLowAttemptCalculator.cs" />
     <Compile Include="Relation.cs" />
   </ItemGroup>
   <ItemGroup>

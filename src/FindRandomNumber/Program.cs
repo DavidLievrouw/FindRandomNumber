@@ -18,10 +18,15 @@ namespace FindRandomNumber {
       var minValue = short.Parse(ConfigurationManager.AppSettings["MinValue"]);
       var maxValue = short.Parse(ConfigurationManager.AppSettings["MaxValue"]);
       var range = new Range(minValue, maxValue);
+      var midPointCalculator = new MidPointCalculator();
 
       return new FindRandomNumberProgram(
         new Generator.Generator(range),
-        new GuesserFactory(new AttemptCalculator(range)),
+        new GuesserFactory(
+          new CompositeAttemptCalculator(
+            new NoPreviousGuessAttemptCalculator(midPointCalculator, range), 
+            new PreviousGuessTooLowAttemptCalculator(midPointCalculator), 
+            new PreviousGuessTooHighAttemptCalculator(midPointCalculator))),
         new ConsoleGuessingSequenceOutputWriter(new RealConsole()));
     }
   }

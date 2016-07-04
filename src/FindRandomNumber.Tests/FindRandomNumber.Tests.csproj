@@ -75,6 +75,7 @@
     <Compile Include="FindRandomNumberProgramTests.cs" />
     <Compile Include="Generator\GeneratorTests.cs" />
     <Compile Include="Common\RandomNumberTests.cs" />
+    <Compile Include="Guesser\CompositeAttemptCalculatorTests.cs" />
     <Compile Include="Guesser\GuessAttempterTests.cs" />
     <Compile Include="Guesser\GuessEqualityComparer.cs" />
     <Compile Include="Guesser\GuesserFactoryTests.cs" />
@@ -83,6 +84,10 @@
     <Compile Include="Guesser\GuessingSequenceTests.cs" />
     <Compile Include="Guesser\GuessTests.cs" />
     <Compile Include="Common\RangeTests.cs" />
+    <Compile Include="Guesser\MidPointCalculatorTests.cs" />
+    <Compile Include="Guesser\PreviousGuessTooLowAttemptCalculatorTests.cs" />
+    <Compile Include="Guesser\PreviousGuessTooHighAttemptCalculatorTests.cs" />
+    <Compile Include="Guesser\NoPreviousGuessAttemptCalculatorTests.cs" />
     <Compile Include="Output\ConsoleGuessingSequenceOutputWriterTests.cs" />
     <Compile Include="ExtensionsForTests.cs" />
   </ItemGroup>
