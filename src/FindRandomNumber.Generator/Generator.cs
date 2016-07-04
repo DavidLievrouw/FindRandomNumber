@@ -7,12 +7,13 @@ namespace FindRandomNumber.Generator {
 
     public Generator(short minValue, short maxValue) {
       if (maxValue < minValue) throw new ArgumentOutOfRangeException(nameof(maxValue), "The maximum value is less than the minimum value.");
+      if (maxValue >= short.MaxValue) throw new ArgumentOutOfRangeException(nameof(maxValue), $"The maximum value is {short.MaxValue - 1}.");
       _minValue = minValue;
       _maxValue = maxValue;
     }
 
     public RandomNumber Generate() {
-      throw new System.NotImplementedException();
+      return (RandomNumber)(short)new Random().Next(_minValue, _maxValue + 1);
     }
   }
 }
