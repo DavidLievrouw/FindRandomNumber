@@ -19,6 +19,7 @@ namespace FindRandomNumber {
     static IFindRandomNumberProgram ComposeProgram() {
       var minValue = short.Parse(ConfigurationManager.AppSettings["MinValue"]);
       var maxValue = short.Parse(ConfigurationManager.AppSettings["MaxValue"]);
+      var maxAttempts = int.Parse(ConfigurationManager.AppSettings["MaxAttempts"]);
       var range = new Range(minValue, maxValue);
       var midPointCalculator = new MidPointCalculator();
 
@@ -28,7 +29,8 @@ namespace FindRandomNumber {
           new CompositeAttemptCalculator(
             new NoPreviousGuessAttemptCalculator(midPointCalculator, range), 
             new PreviousGuessTooLowAttemptCalculator(midPointCalculator), 
-            new PreviousGuessTooHighAttemptCalculator(midPointCalculator))),
+            new PreviousGuessTooHighAttemptCalculator(midPointCalculator)),
+          maxAttempts),
         new ConsoleGuessingSequenceOutputWriter(new RealConsole()));
     }
   }
