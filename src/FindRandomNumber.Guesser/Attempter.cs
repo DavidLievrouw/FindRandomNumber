@@ -1,10 +1,10 @@
 ﻿using FindRandomNumber.Guesser.AttemptCalculation;
 
 namespace FindRandomNumber.Guesser {
-  public class GuessAttempter : IGuessAttempter {
+  public class Attempter : IAttempter {
     readonly short _valueToGuess;
 
-    public GuessAttempter(short valueToGuess) {
+    public Attempter(short valueToGuess) {
       _valueToGuess = valueToGuess;
     }
 

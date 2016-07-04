@@ -5,13 +5,13 @@ using FindRandomNumber.Guesser.AttemptCalculation;
 namespace FindRandomNumber.Guesser {
   public class Guesser : IGuesser {
     readonly IAttemptCalculator _attemptCalculator;
-    readonly IGuessAttempter _guessAttempter;
+    readonly IAttempter _attempter;
 
-    public Guesser(IAttemptCalculator attemptCalculator, IGuessAttempter guessAttempter) {
+    public Guesser(IAttemptCalculator attemptCalculator, IAttempter attempter) {
       if (attemptCalculator == null) throw new ArgumentNullException(nameof(attemptCalculator));
-      if (guessAttempter == null) throw new ArgumentNullException(nameof(guessAttempter));
+      if (attempter == null) throw new ArgumentNullException(nameof(attempter));
       _attemptCalculator = attemptCalculator;
-      _guessAttempter = guessAttempter;
+      _attempter = attempter;
     }
 
     public GuessingSequence GuessRandomNumber() {
@@ -21,7 +21,7 @@ namespace FindRandomNumber.Guesser {
       Guess? currentGuess = null;
       while (!currentGuess.HasValue || !currentGuess.Value.IsCorrectGuess) {
         var nextAttempt = _attemptCalculator.CalculateNextAttempt(currentGuess);
-        currentGuess = _guessAttempter.AttemptGuess(nextAttempt);
+        currentGuess = _attempter.AttemptGuess(nextAttempt);
         attemptedGuesses.Add(currentGuess.Value);
       }
 

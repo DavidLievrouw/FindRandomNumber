@@ -4,12 +4,12 @@ namespace FindRandomNumber.Guesser {
   [TestFixture]
   public class GuessAttempterTests {
     short _valueToGuess;
-    GuessAttempter _sut;
+    Attempter _sut;
 
     [SetUp]
     public void SetUp() {
       _valueToGuess = 123;
-      _sut = new GuessAttempter(_valueToGuess);
+      _sut = new Attempter(_valueToGuess);
     }
 
     [TestFixture]

@@ -1,7 +1,7 @@
 ﻿using FindRandomNumber.Guesser.AttemptCalculation;
 
 namespace FindRandomNumber.Guesser {
-  public interface IGuessAttempter {
+  public interface IAttempter {
     Guess AttemptGuess(Attempt attemptValue);
   }
 }
