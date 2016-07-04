@@ -55,13 +55,13 @@
       <Project>{8cfb6052-16d2-4ce0-bb46-fe3cce2795cf}</Project>
       <Name>FindRandomNumber.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FindRandomNumber.Generator\FindRandomNumber.Generator.csproj">
+    <ProjectReference Include="..\FindRandomNumber.Generator\FindRandomNumber.Generation.csproj">
       <Project>{6c7d4875-30ea-47b4-9718-5d19eafc0136}</Project>
-      <Name>FindRandomNumber.Generator</Name>
+      <Name>FindRandomNumber.Generation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FindRandomNumber.Guesser\FindRandomNumber.Guesser.csproj">
+    <ProjectReference Include="..\FindRandomNumber.Guesser\FindRandomNumber.Guessing.csproj">
       <Project>{6e0afeb0-9470-458b-aefd-71c026b88954}</Project>
-      <Name>FindRandomNumber.Guesser</Name>
+      <Name>FindRandomNumber.Guessing</Name>
     </ProjectReference>
     <ProjectReference Include="..\FindRandomNumber\FindRandomNumber.csproj">
       <Project>{02fa0632-bf94-412a-b375-a28e24d8e8b1}</Project>
@@ -73,21 +73,21 @@
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="FindRandomNumberProgramTests.cs" />
-    <Compile Include="Generator\GeneratorTests.cs" />
+    <Compile Include="Generation\GeneratorTests.cs" />
     <Compile Include="Common\RandomNumberTests.cs" />
-    <Compile Include="Guesser\AttemptCalculation\CompositeAttemptCalculatorTests.cs" />
-    <Compile Include="Guesser\GuessAttempterTests.cs" />
-    <Compile Include="Guesser\GuessEqualityComparer.cs" />
-    <Compile Include="Guesser\GuesserFactoryTests.cs" />
-    <Compile Include="Guesser\GuesserTests.cs" />
-    <Compile Include="Guesser\GuessingSequenceSummaryTests.cs" />
-    <Compile Include="Guesser\GuessingSequenceTests.cs" />
-    <Compile Include="Guesser\GuessTests.cs" />
+    <Compile Include="Guessing\AttemptCalculation\CompositeAttemptCalculatorTests.cs" />
+    <Compile Include="Guessing\GuessAttempterTests.cs" />
+    <Compile Include="Guessing\GuessEqualityComparer.cs" />
+    <Compile Include="Guessing\GuesserFactoryTests.cs" />
+    <Compile Include="Guessing\GuesserTests.cs" />
+    <Compile Include="Guessing\GuessingSequenceSummaryTests.cs" />
+    <Compile Include="Guessing\GuessingSequenceTests.cs" />
+    <Compile Include="Guessing\GuessTests.cs" />
     <Compile Include="Common\RangeTests.cs" />
-    <Compile Include="Guesser\AttemptCalculation\MidPointCalculatorTests.cs" />
-    <Compile Include="Guesser\AttemptCalculation\PreviousGuessTooLowAttemptCalculatorTests.cs" />
-    <Compile Include="Guesser\AttemptCalculation\PreviousGuessTooHighAttemptCalculatorTests.cs" />
-    <Compile Include="Guesser\AttemptCalculation\NoPreviousGuessAttemptCalculatorTests.cs" />
+    <Compile Include="Guessing\AttemptCalculation\MidPointCalculatorTests.cs" />
+    <Compile Include="Guessing\AttemptCalculation\PreviousGuessTooLowAttemptCalculatorTests.cs" />
+    <Compile Include="Guessing\AttemptCalculation\PreviousGuessTooHighAttemptCalculatorTests.cs" />
+    <Compile Include="Guessing\AttemptCalculation\NoPreviousGuessAttemptCalculatorTests.cs" />
     <Compile Include="Output\ConsoleGuessingSequenceOutputWriterTests.cs" />
     <Compile Include="ExtensionsForTests.cs" />
   </ItemGroup>

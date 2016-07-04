@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 
-namespace FindRandomNumber.Guesser {
+namespace FindRandomNumber.Guessing {
   [TestFixture]
   public class GuessingSequenceTests {
     IEnumerable<Guess> _guesses;

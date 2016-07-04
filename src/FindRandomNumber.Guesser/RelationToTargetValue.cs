@@ -1,4 +1,4 @@
-namespace FindRandomNumber.Guesser {
+namespace FindRandomNumber.Guessing {
   public enum RelationToTargetValue {
     LessThanTargetValue = -1,
     Correct = 0,

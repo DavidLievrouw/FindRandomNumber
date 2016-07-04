@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using FindRandomNumber.Guesser.AttemptCalculation;
+using FindRandomNumber.Guessing.AttemptCalculation;
 
-namespace FindRandomNumber.Guesser {
+namespace FindRandomNumber.Guessing {
   public class Guesser : IGuesser {
     readonly IAttemptCalculator _attemptCalculator;
     readonly IAttemptPerformer _attemptPerformer;

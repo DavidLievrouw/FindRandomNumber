@@ -1,6 +1,6 @@
 ﻿using System;
 using FakeItEasy;
-using FindRandomNumber.Guesser;
+using FindRandomNumber.Guessing;
 using NUnit.Framework;
 
 namespace FindRandomNumber.Output {

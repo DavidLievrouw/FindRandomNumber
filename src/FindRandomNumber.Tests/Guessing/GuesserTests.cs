@@ -1,32 +1,32 @@
 ﻿using System;
 using FakeItEasy;
-using FindRandomNumber.Guesser.AttemptCalculation;
+using FindRandomNumber.Guessing.AttemptCalculation;
 using NUnit.Framework;
 
-namespace FindRandomNumber.Guesser {
+namespace FindRandomNumber.Guessing {
   [TestFixture]
   public class GuesserTests {
     IAttemptCalculator _attemptCalculator;
     IAttemptPerformer _attemptPerformer;
-    Guesser _sut;
+    Guessing.Guesser _sut;
 
     [SetUp]
     public void SetUp() {
       _attemptCalculator = A.Fake<IAttemptCalculator>();
       _attemptPerformer = A.Fake<IAttemptPerformer>();
-      _sut = new Guesser(_attemptCalculator, _attemptPerformer);
+      _sut = new Guessing.Guesser(_attemptCalculator, _attemptPerformer);
     }
 
     [TestFixture]
     public class Construction : GuesserTests {
       [Test]
       public void GivenNullAttemptCalculator_Throws() {
-        Assert.Throws<ArgumentNullException>(() => new Guesser(null, _attemptPerformer));
+        Assert.Throws<ArgumentNullException>(() => new Guessing.Guesser(null, _attemptPerformer));
       }
 
       [Test]
       public void GivenNullAttempter_Throws() {
-        Assert.Throws<ArgumentNullException>(() => new Guesser(_attemptCalculator, null));
+        Assert.Throws<ArgumentNullException>(() => new Guessing.Guesser(_attemptCalculator, null));
       }
     }
 

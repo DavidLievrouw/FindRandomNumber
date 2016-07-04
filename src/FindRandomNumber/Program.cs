@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Configuration;
 using FindRandomNumber.Common;
-using FindRandomNumber.Guesser;
-using FindRandomNumber.Guesser.AttemptCalculation;
+using FindRandomNumber.Generation;
+using FindRandomNumber.Guessing;
+using FindRandomNumber.Guessing.AttemptCalculation;
 using FindRandomNumber.Output;
 
 namespace FindRandomNumber {
@@ -22,7 +23,7 @@ namespace FindRandomNumber {
       var midPointCalculator = new MidPointCalculator();
 
       return new FindRandomNumberProgram(
-        new Generator.Generator(range),
+        new Generator(range),
         new GuesserFactory(
           new CompositeAttemptCalculator(
             new NoPreviousGuessAttemptCalculator(midPointCalculator, range), 

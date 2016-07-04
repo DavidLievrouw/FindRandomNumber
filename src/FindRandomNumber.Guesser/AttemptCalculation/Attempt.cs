@@ -1,6 +1,6 @@
 ﻿using FindRandomNumber.Common;
 
-namespace FindRandomNumber.Guesser.AttemptCalculation {
+namespace FindRandomNumber.Guessing.AttemptCalculation {
   public struct Attempt {
     public Attempt(short value, Range range) {
       Value = value;

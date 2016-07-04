@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace FindRandomNumber.Guesser {
+namespace FindRandomNumber.Guessing {
   [TestFixture]
   public class GuessAttempterTests {
     short _valueToGuess;

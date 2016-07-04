@@ -1,7 +1,7 @@
 ﻿using System;
 using FindRandomNumber.Common;
 
-namespace FindRandomNumber.Generator {
+namespace FindRandomNumber.Generation {
   public class Generator : IGenerator {
     readonly Range _range;
 

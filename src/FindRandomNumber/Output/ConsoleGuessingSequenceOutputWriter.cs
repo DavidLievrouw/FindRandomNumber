@@ -1,6 +1,6 @@
 ﻿using System;
 using FindRandomNumber.Common;
-using FindRandomNumber.Guesser;
+using FindRandomNumber.Guessing;
 
 namespace FindRandomNumber.Output {
   public class ConsoleGuessingSequenceOutputWriter : IGuessingSequenceOutputWriter {

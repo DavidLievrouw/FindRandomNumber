@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6E0AFEB0-9470-458B-AEFD-71C026B88954}</ProjectGuid>
+    <ProjectGuid>{6C7D4875-30EA-47B4-9718-5D19EAFC0136}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FindRandomNumber.Guesser</RootNamespace>
-    <AssemblyName>FindRandomNumber.Guesser</AssemblyName>
+    <RootNamespace>FindRandomNumber.Generation</RootNamespace>
+    <AssemblyName>FindRandomNumber.Generation</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -43,23 +43,8 @@
     <Compile Include="..\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="AttemptCalculation\Attempt.cs" />
-    <Compile Include="AttemptCalculation\CompositeAttemptCalculator.cs" />
-    <Compile Include="Guess.cs" />
-    <Compile Include="AttemptPerformer.cs" />
-    <Compile Include="Guesser.cs" />
-    <Compile Include="GuesserFactory.cs" />
-    <Compile Include="GuessingSequence.cs" />
-    <Compile Include="AttemptCalculation\IAttemptCalculator.cs" />
-    <Compile Include="IAttemptPerformer.cs" />
-    <Compile Include="IGuesser.cs" />
-    <Compile Include="IGuesserFactory.cs" />
-    <Compile Include="AttemptCalculation\IMidPointCalculator.cs" />
-    <Compile Include="AttemptCalculation\MidPointCalculator.cs" />
-    <Compile Include="AttemptCalculation\NoPreviousGuessAttemptCalculator.cs" />
-    <Compile Include="AttemptCalculation\PreviousGuessTooHighAttemptCalculator.cs" />
-    <Compile Include="AttemptCalculation\PreviousGuessTooLowAttemptCalculator.cs" />
-    <Compile Include="RelationToTargetValue.cs" />
+    <Compile Include="Generator.cs" />
+    <Compile Include="IGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FindRandomNumber.Common\FindRandomNumber.Common.csproj">

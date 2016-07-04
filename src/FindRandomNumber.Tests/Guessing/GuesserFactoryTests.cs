@@ -1,9 +1,9 @@
 ﻿using System;
 using FakeItEasy;
-using FindRandomNumber.Guesser.AttemptCalculation;
+using FindRandomNumber.Guessing.AttemptCalculation;
 using NUnit.Framework;
 
-namespace FindRandomNumber.Guesser {
+namespace FindRandomNumber.Guessing {
   [TestFixture]
   public class GuesserFactoryTests {
     IAttemptCalculator _attemptCalculator;

@@ -1,6 +1,6 @@
 ﻿using System;
-using FindRandomNumber.Generator;
-using FindRandomNumber.Guesser;
+using FindRandomNumber.Generation;
+using FindRandomNumber.Guessing;
 using FindRandomNumber.Output;
 
 namespace FindRandomNumber {

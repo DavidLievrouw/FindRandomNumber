@@ -1,6 +1,6 @@
 ﻿using FindRandomNumber.Common;
 
-namespace FindRandomNumber.Generator {
+namespace FindRandomNumber.Generation {
   public interface IGenerator {
     RandomNumber Generate();
   }

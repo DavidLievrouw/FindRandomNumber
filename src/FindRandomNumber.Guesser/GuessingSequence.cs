@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace FindRandomNumber.Guesser {
+namespace FindRandomNumber.Guessing {
   public class GuessingSequence : IEnumerable<Guess> {
     readonly List<Guess> _guesses;
 

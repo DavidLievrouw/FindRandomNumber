@@ -1,6 +1,6 @@
-﻿using FindRandomNumber.Guesser.AttemptCalculation;
+﻿using FindRandomNumber.Guessing.AttemptCalculation;
 
-namespace FindRandomNumber.Guesser {
+namespace FindRandomNumber.Guessing {
   public class AttemptPerformer : IAttemptPerformer {
     readonly short _valueToGuess;
 

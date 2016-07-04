@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FindRandomNumber.Guesser.AttemptCalculation {
+namespace FindRandomNumber.Guessing.AttemptCalculation {
   public class CompositeAttemptCalculator : IAttemptCalculator {
     readonly IAttemptCalculator _noPreviousGuessAttemptCalculator;
     readonly IAttemptCalculator _previousGuessTooLowAttemptCalculator;

@@ -1,8 +1,8 @@
 ﻿using System;
 using FakeItEasy;
 using FindRandomNumber.Common;
-using FindRandomNumber.Generator;
-using FindRandomNumber.Guesser;
+using FindRandomNumber.Generation;
+using FindRandomNumber.Guessing;
 using FindRandomNumber.Output;
 using NUnit.Framework;
 

@@ -1,4 +1,4 @@
-﻿using FindRandomNumber.Guesser;
+﻿using FindRandomNumber.Guessing;
 
 namespace FindRandomNumber.Output {
   public interface IGuessingSequenceOutputWriter {

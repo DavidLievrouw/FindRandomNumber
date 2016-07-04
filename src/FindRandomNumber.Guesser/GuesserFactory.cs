@@ -1,7 +1,7 @@
 ﻿using System;
-using FindRandomNumber.Guesser.AttemptCalculation;
+using FindRandomNumber.Guessing.AttemptCalculation;
 
-namespace FindRandomNumber.Guesser {
+namespace FindRandomNumber.Guessing {
   public class GuesserFactory : IGuesserFactory {
     readonly IAttemptCalculator _attemptCalculator;
 
