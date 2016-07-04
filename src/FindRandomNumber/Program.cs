@@ -10,9 +10,11 @@ namespace FindRandomNumber {
     static void Main(string[] args) {
       var minValue = short.Parse(ConfigurationManager.AppSettings["MinValue"]);
       var maxValue = short.Parse(ConfigurationManager.AppSettings["MaxValue"]);
+      var range = new Range(minValue, maxValue);
+
       _findRandomNumberProgram = new FindRandomNumberProgram(
-        new Generator.Generator(minValue, maxValue),
-        new GuesserFactory(new AttemptCalculator(minValue, maxValue)),
+        new Generator.Generator(minValue, maxValue), // ToDo: Range and extensions in common library
+        new GuesserFactory(new AttemptCalculator(range)),
         new ConsoleGuessingSequenceOutputWriter(new RealConsole()));
 
       _findRandomNumberProgram.Run();

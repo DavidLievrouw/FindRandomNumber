@@ -16,14 +16,15 @@ namespace FindRandomNumber.Guesser {
     public class AttemptGuess : GuessAttempterTests {
       [Test]
       public void GivenCorrectGuess_ReturnsGuessThatRepresentsCorrectAttempt() {
-        var expected = new Guess(_valueToGuess, Relation.Correct);
-        var actual = _sut.AttemptGuess(_valueToGuess);
+        var attempt = _valueToGuess.AsAttempt();
+        var expected = new Guess(attempt, Relation.Correct);
+        var actual = _sut.AttemptGuess(attempt);
         Assert.That(actual, Is.EqualTo(expected).Using(new GuessEqualityComparer()));
       }
 
       [Test]
       public void GivenSmallerNumberGuess_ReturnsGuessThatRepresentsFailedAttempt() {
-        var attempt = (short)(_valueToGuess - 1);
+        var attempt = ((short)(_valueToGuess - 1)).AsAttempt();
         var expected = new Guess(attempt, Relation.Smaller);
         var actual = _sut.AttemptGuess(attempt);
         Assert.That(actual, Is.EqualTo(expected).Using(new GuessEqualityComparer()));
@@ -31,7 +32,7 @@ namespace FindRandomNumber.Guesser {
 
       [Test]
       public void GivenLargerNumberGuess_ReturnsGuessThatRepresentsFailedAttempt() {
-        var attempt = (short)(_valueToGuess + 1);
+        var attempt = ((short)(_valueToGuess + 1)).AsAttempt();
         var expected = new Guess(attempt, Relation.Larger);
         var actual = _sut.AttemptGuess(attempt);
         Assert.That(actual, Is.EqualTo(expected).Using(new GuessEqualityComparer()));

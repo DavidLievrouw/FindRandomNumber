@@ -6,14 +6,14 @@
       _valueToGuess = valueToGuess;
     }
 
-    public Guess AttemptGuess(short attemptValue) {
-      var relation = attemptValue == _valueToGuess
+    public Guess AttemptGuess(Attempt attempt) {
+      var relation = attempt.Value == _valueToGuess
         ? Relation.Correct
-        : attemptValue < _valueToGuess
+        : attempt.Value < _valueToGuess
           ? Relation.Smaller
           : Relation.Larger;
 
-      return new Guess(attemptValue, relation);
+      return new Guess(attempt, relation);
     }
   }
 }

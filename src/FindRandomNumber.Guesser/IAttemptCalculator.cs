@@ -1,5 +1,5 @@
 ﻿namespace FindRandomNumber.Guesser {
   public interface IAttemptCalculator {
-    short CalculateNextAttempt(Guess? previousGuess);
+    Attempt CalculateNextAttempt(Guess? previousGuess);
   }
 }

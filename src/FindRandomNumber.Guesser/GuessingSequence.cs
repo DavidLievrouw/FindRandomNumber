@@ -24,7 +24,7 @@ namespace FindRandomNumber.Guesser {
     public GuessingSequenceSummary GetSummary() {
       return new GuessingSequenceSummary(
         _guesses.Count,
-        _guesses.Last().GuessedValue);
+        _guesses.Last().Attempt.Value);
     }
 
     public class GuessingSequenceSummary {
