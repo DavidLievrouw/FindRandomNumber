@@ -55,11 +55,11 @@
       <Project>{8cfb6052-16d2-4ce0-bb46-fe3cce2795cf}</Project>
       <Name>FindRandomNumber.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FindRandomNumber.Generator\FindRandomNumber.Generation.csproj">
+    <ProjectReference Include="..\FindRandomNumber.Generation\FindRandomNumber.Generation.csproj">
       <Project>{6c7d4875-30ea-47b4-9718-5d19eafc0136}</Project>
       <Name>FindRandomNumber.Generation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FindRandomNumber.Guesser\FindRandomNumber.Guessing.csproj">
+    <ProjectReference Include="..\FindRandomNumber.Guessing\FindRandomNumber.Guessing.csproj">
       <Project>{6e0afeb0-9470-458b-aefd-71c026b88954}</Project>
       <Name>FindRandomNumber.Guessing</Name>
     </ProjectReference>

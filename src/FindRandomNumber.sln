@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindRandomNumber", "FindRan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindRandomNumber.Tests", "FindRandomNumber.Tests\FindRandomNumber.Tests.csproj", "{7D16F157-349B-418A-ABBE-7FFC77963266}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindRandomNumber.Generation", "FindRandomNumber.Generator\FindRandomNumber.Generation.csproj", "{6C7D4875-30EA-47B4-9718-5D19EAFC0136}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindRandomNumber.Generation", "FindRandomNumber.Generation\FindRandomNumber.Generation.csproj", "{6C7D4875-30EA-47B4-9718-5D19EAFC0136}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindRandomNumber.Guessing", "FindRandomNumber.Guesser\FindRandomNumber.Guessing.csproj", "{6E0AFEB0-9470-458B-AEFD-71C026B88954}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindRandomNumber.Guessing", "FindRandomNumber.Guessing\FindRandomNumber.Guessing.csproj", "{6E0AFEB0-9470-458B-AEFD-71C026B88954}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindRandomNumber.Common", "FindRandomNumber.Common\FindRandomNumber.Common.csproj", "{8CFB6052-16D2-4CE0-BB46-FE3CCE2795CF}"
 EndProject
