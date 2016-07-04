@@ -7,7 +7,7 @@ namespace FindRandomNumber.Guesser {
     public class ToStringOverride : GuessTests {
       [Test]
       public void ReturnsExpectedString_ForIncorrectGuess() {
-        var sut = new Guess(123.AsAttempt(), Relation.LowerThanTarget);
+        var sut = new Guess(123.AsAttempt(), RelationToTargetValue.LessThanTargetValue);
         var expected = "Proposing number “123”... incorrect.";
         var actual = sut.ToString();
         Assert.That(actual, Is.EqualTo(expected));
@@ -15,7 +15,7 @@ namespace FindRandomNumber.Guesser {
 
       [Test]
       public void ReturnsExpectedString_ForCorrectGuess() {
-        var sut = new Guess(1234.AsAttempt(), Relation.Correct);
+        var sut = new Guess(1234.AsAttempt(), RelationToTargetValue.Correct);
         var expected = "Proposing number “1234”... correct.";
         var actual = sut.ToString();
         Assert.That(actual, Is.EqualTo(expected));
@@ -24,11 +24,11 @@ namespace FindRandomNumber.Guesser {
 
     [TestFixture]
     public class IsCorrectGuess : GuessTests {
-      [TestCase(Relation.Correct, true)]
-      [TestCase(Relation.GreaterThanTarget, false)]
-      [TestCase(Relation.LowerThanTarget, false)]
-      public void DeterminesResultBasedOnRelation(Relation relation, bool expected) {
-        var sut = new Guess(1234.AsAttempt(), relation);
+      [TestCase(RelationToTargetValue.Correct, true)]
+      [TestCase(RelationToTargetValue.GreaterThanTargetValue, false)]
+      [TestCase(RelationToTargetValue.LessThanTargetValue, false)]
+      public void DeterminesResultBasedOnRelation(RelationToTargetValue relationToTargetValue, bool expected) {
+        var sut = new Guess(1234.AsAttempt(), relationToTargetValue);
         var actual = sut.IsCorrectGuess;
         Assert.That(actual, Is.EqualTo(expected));
       }

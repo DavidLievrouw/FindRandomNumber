@@ -70,7 +70,7 @@ namespace FindRandomNumber.Guesser {
 
       [Test]
       public void GivenPreviousAttemptWasTooLow_CallsPreviousAttemptTooLowCalculator() {
-        var previousGuess = new Guess(new Attempt(20, new Range()), Relation.LowerThanTarget);
+        var previousGuess = new Guess(new Attempt(20, new Range()), RelationToTargetValue.LessThanTargetValue);
 
         var actual = _sut.CalculateNextAttempt(previousGuess);
 
@@ -82,7 +82,7 @@ namespace FindRandomNumber.Guesser {
 
       [Test]
       public void GivenPreviousAttemptWasTooHigh_CallsPreviousAttemptTooHighCalculator() {
-        var previousGuess = new Guess(new Attempt(20, new Range()), Relation.GreaterThanTarget);
+        var previousGuess = new Guess(new Attempt(20, new Range()), RelationToTargetValue.GreaterThanTargetValue);
 
         var actual = _sut.CalculateNextAttempt(previousGuess);
 

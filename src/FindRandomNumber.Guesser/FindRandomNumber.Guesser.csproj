@@ -59,7 +59,7 @@
     <Compile Include="NoPreviousGuessAttemptCalculator.cs" />
     <Compile Include="PreviousGuessTooHighAttemptCalculator.cs" />
     <Compile Include="PreviousGuessTooLowAttemptCalculator.cs" />
-    <Compile Include="Relation.cs" />
+    <Compile Include="RelationToTargetValue.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FindRandomNumber.Common\FindRandomNumber.Common.csproj">

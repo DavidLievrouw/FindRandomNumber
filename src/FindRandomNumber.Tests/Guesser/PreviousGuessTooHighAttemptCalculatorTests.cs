@@ -32,7 +32,7 @@ namespace FindRandomNumber.Guesser {
       [SetUp]
       public override void SetUp() {
         base.SetUp();
-        _previousGuess = new Guess(new Attempt(20, new Range(1, 50)), Relation.GreaterThanTarget);
+        _previousGuess = new Guess(new Attempt(20, new Range(1, 50)), RelationToTargetValue.GreaterThanTargetValue);
         _midPoint = 10;
         _rangeForNextAttempt = new Range(_previousGuess.Attempt.Range.Minimum, (short)(_previousGuess.Attempt.Value - 1));
         A.CallTo(() => _midPointCalculator.CalculateMidPoint(_rangeForNextAttempt)).Returns(_midPoint);

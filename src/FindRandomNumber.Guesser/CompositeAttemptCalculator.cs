@@ -21,7 +21,7 @@ namespace FindRandomNumber.Guesser {
     public Attempt CalculateNextAttempt(Guess? previousGuess) {
       if (!previousGuess.HasValue) return _noPreviousGuessAttemptCalculator.CalculateNextAttempt(null);
 
-      return previousGuess.Value.RelationToCorrectAnswer == Relation.LowerThanTarget
+      return previousGuess.Value.RelationToTargetValue == RelationToTargetValue.LessThanTargetValue
         ? _previousGuessTooLowAttemptCalculator.CalculateNextAttempt(previousGuess)
         : _previousGuessTooHighAttemptCalculator.CalculateNextAttempt(previousGuess);
     }

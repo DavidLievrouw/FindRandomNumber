@@ -8,7 +8,7 @@ namespace FindRandomNumber.Guesser {
 
     [SetUp]
     public void SetUp() {
-      _guesses = new[] { new Guess(1.AsAttempt(), Relation.LowerThanTarget), new Guess(2.AsAttempt(), Relation.LowerThanTarget), new Guess(8.AsAttempt(), Relation.GreaterThanTarget), new Guess(6.AsAttempt(), Relation.Correct) };
+      _guesses = new[] { new Guess(1.AsAttempt(), RelationToTargetValue.LessThanTargetValue), new Guess(2.AsAttempt(), RelationToTargetValue.LessThanTargetValue), new Guess(8.AsAttempt(), RelationToTargetValue.GreaterThanTargetValue), new Guess(6.AsAttempt(), RelationToTargetValue.Correct) };
       _sequence = new GuessingSequence(_guesses);
     }
 
