@@ -47,6 +47,7 @@
     <Compile Include="..\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="ExtensionsForEnumerableOfT.ForEach.cs" />
     <Compile Include="FindRandomNumberProgram.cs" />
     <Compile Include="IFindRandomNumberProgram.cs" />
     <Compile Include="Output\ConsoleGuessingSequenceOutputWriter.cs" />

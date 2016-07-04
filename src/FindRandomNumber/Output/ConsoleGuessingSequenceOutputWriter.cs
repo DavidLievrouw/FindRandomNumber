@@ -12,7 +12,11 @@ namespace FindRandomNumber.Output {
 
     public void Write(GuessingSequence guessingSequence) {
       if (guessingSequence == null) throw new ArgumentNullException(nameof(guessingSequence));
-      throw new NotImplementedException();
+
+      guessingSequence.ForEach(guess => _console.WriteLine(guess.ToString()));
+
+      var summary = guessingSequence.GetSummary();
+      _console.WriteLine(summary.ToString());
     }
   }
 }

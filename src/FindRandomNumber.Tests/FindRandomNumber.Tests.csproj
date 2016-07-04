@@ -73,7 +73,10 @@
     <Compile Include="Generator\RandomNumberTests.cs" />
     <Compile Include="Guesser\GuesserFactoryTests.cs" />
     <Compile Include="Guesser\GuesserTests.cs" />
+    <Compile Include="Guesser\GuessingSequenceSummaryTests.cs" />
     <Compile Include="Guesser\GuessingSequenceTests.cs" />
+    <Compile Include="Guesser\GuessTests.cs" />
+    <Compile Include="Output\ConsoleGuessingSequenceOutputWriterTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -5,7 +5,11 @@ namespace FindRandomNumber.Guesser {
       IsCorrectGuess = isCorrectGuess;
     }
 
-    public short GuessedValue { get; }  
+    public short GuessedValue { get; }
     public bool IsCorrectGuess { get; }
+
+    public override string ToString() {
+      return $"Proposing number “{GuessedValue}”... {(IsCorrectGuess ? "correct" : "incorrect")}.";
+    }
   }
 }

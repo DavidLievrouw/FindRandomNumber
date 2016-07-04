@@ -35,6 +35,10 @@ namespace FindRandomNumber.Guesser {
 
       public int NumberOfAttempts { get; }
       public short GuessedNumber { get; }
+
+      public override string ToString() {
+        return $"Guessed the number “{GuessedNumber}” after {NumberOfAttempts} attempts.";
+      }
     }
   }
 }
