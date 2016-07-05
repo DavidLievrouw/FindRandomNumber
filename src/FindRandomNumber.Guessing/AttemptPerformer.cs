@@ -9,9 +9,11 @@ namespace FindRandomNumber.Guessing {
     }
 
     public Guess PerformAttempt(Attempt attempt) {
-      var relation = attempt.Value == _valueToGuess
+      var comparisonResult = attempt.CompareTo(_valueToGuess);
+
+      var relation = comparisonResult == 0
         ? RelationToTargetValue.Correct
-        : attempt.Value < _valueToGuess
+        : comparisonResult > 0
           ? RelationToTargetValue.LessThanTargetValue
           : RelationToTargetValue.GreaterThanTargetValue;
 

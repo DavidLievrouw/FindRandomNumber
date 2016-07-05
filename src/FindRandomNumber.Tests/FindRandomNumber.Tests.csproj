@@ -75,6 +75,7 @@
     <Compile Include="FindRandomNumberProgramTests.cs" />
     <Compile Include="Generation\GeneratorTests.cs" />
     <Compile Include="Common\RandomNumberTests.cs" />
+    <Compile Include="Guessing\AttemptCalculation\AttemptTests.cs" />
     <Compile Include="Guessing\AttemptCalculation\CompositeAttemptCalculatorTests.cs" />
     <Compile Include="Guessing\GuessAttempterTests.cs" />
     <Compile Include="Guessing\GuessEqualityComparer.cs" />
